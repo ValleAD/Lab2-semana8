@@ -13,6 +13,9 @@ public class ConexionCRUD {
     private final String driverConector = "com.mysql.jdbc.Driver";
      private static Connection conexion;
      
+     public static void main(String[] args) {
+        
+    }
    public  ConexionCRUD () {
         try{
             Class.forName(driverConector);
@@ -102,8 +105,8 @@ public class ConexionCRUD {
                      cone.close();
             }
           } catch (SQLException e){
-              System.out.println("Ha ocurrido el Sigiente Error"+e.getMessage());
-              System.out.println("se ha encontrado problemas... ");
+              System.out.println("Ha ocurrido el Siguiente Error"+e.getMessage());
+              System.out.println("se han encontrado problemas... ");
           }     
     }   
 } 
