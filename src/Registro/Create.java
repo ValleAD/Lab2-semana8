@@ -26,9 +26,9 @@ public class Create {
         System.out.println("Edad: ");
         est.setEdad(leer.nextInt());
         
-        String tabla = "Estudiante";
-        String camposTabla = "id_estudinte, carnet_esudiante, nom_esudiante, ape_esudiante, edad";
-        String valoresCampos = " " + est.getCarnet_estudiante() + ", " + est.getNom_estudiante() + ", " + est.getApe_estudiante() + ", " + est.getEdad();
+        String tabla = "estudiante";
+        String camposTabla = " carnet_estudiante, nom_estudiante, ape_estudiante, edad";
+        String valoresCampos = "'" + est.getCarnet_estudiante()+ "', '" + est.getNom_estudiante()+ "', '" + est.getApe_estudiante()+ "', '" + est.getEdad()+ "'";
         
         // Objeto de la clase ConexionCRUD
         ConexionCRUD utilerias = new ConexionCRUD();
