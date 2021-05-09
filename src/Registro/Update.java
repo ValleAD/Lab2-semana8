@@ -16,32 +16,32 @@ public class Update {
         System.out.println("<< ACTUALIZAR INGRESO >>");
         
         System.out.println("Ingresar id del registro a modificar");
-        est.setId_Estudiante(leer.nextInt());
+        est.setId_estudiante(leer.nextInt());
         
         //reingreso de datos para actualizar
-        String tablaBuscar = "tb_Estudiante";
-        String camposBuscar = "id_Estudiante, Nom_Estudiante, Ape_Estudiante, Carnet_Estudiante, Edad_Estudiante";
-        String condicionBuscar = "id_Estudiante = " + est.getId_Estudiante();
-        utilerias.desplegarRegistros(tablaBuscar, camposBuscar, condicionBuscar);
+        String tablaBuscar = "estudiante";
+        String camposBuscar = "id_estudiante, nom_estudiante, ape_estudiante, carnet_estudiante, Edad";
+        String condicionBuscar = "id_estudiante = " + est.getId_estudiante();
+        utilerias.desplegarregistro(tablaBuscar, camposBuscar, condicionBuscar);
         
         System.out.println("Nombre: ");
-        est.setNom_Estudiante(leer.next());
+        est.setNom_estudiante(leer.next());
         
         System.out.println("Apellido: ");
-        est.setApe_Estudiante(leer.next());
+        est.setApe_estudiante(leer.next());
         
         System.out.println("Carnet: ");
-        est.setCarnet_Estudiante(leer.next());
+        est.setCarnet_estudiante(leer.next());
         
          System.out.println("Edad: ");
-        est.setEdad_Estudiante(leer.next());
+        est.setEdad(leer.nextInt());
         
-        String tabla = "tb_contacto";
-        String camposValoresNuevos = "Nom_Estudiante - '" + est.getNom_Estudiante() + "', Apellido_Estudiante = '"
-                + est.getApe_Estudiante() + "', Carnet_Estudiante = '" + est.getCarnet_Estudiante() + "', Edad_Estudiante = '"
-                + est.getEdad_Estudiante() + "'";
+        String tabla = "estudiante";
+        String camposValoresNuevos = "nom_estudiante  = '" + est.getNom_estudiante() + "', Ape_estudiante = '"
+                + est.getApe_estudiante() + "', carnet_estudiante = '" + est.getCarnet_estudiante() + "', edad = '"
+                + est.getEdad() + "'";
         
-        utilerias.actucalizarEliminarRegistro(tabla, camposValoresNuevos, condicionBuscar);
+        utilerias.actualizarEliminarRegistro(tabla, camposValoresNuevos, condicionBuscar);
         System.out.println("Modificado correctamente!");
         
         Menu_Principal.desplegarMenu();
