@@ -3,6 +3,22 @@ package Registro;
 import java.sql.SQLException;//Libreria  para conexiones de bases de datos
 import java.util.Scanner;
 
+/*
+Crear el CRUD para la siguiente tabla
+
+_____________________________________________________________________________________________
+|                                   ESTUDIANTE                                              |
+|___________________________________________________________________________________________|
+|    Campos           |   Tipo de Datos   |         Otros                                   |
+| id_estudiante       |    int            | Llave primaria, autoincrementablecdesde 1001    |
+| carnet_estudiante   |    varchar(6)     | Ejemplo MP1234                                  |
+| nom_estudiante      |    varchar(30)    |                                                 |
+| ape_estudiante      |    varchar(30)    |                                                 |
+| edad_estudiante     |    int(3)         |                                                 |
+|_____________________|___________________|_________________________________________________|
+
+*/
+
 public class Menu_Principal {
     //throws especifica el tipo de excepcion que puede ocasionar
     public static void main(String[] args) throws SQLException{
@@ -34,10 +50,10 @@ public class Menu_Principal {
                 Read read = new Read();
                 break;
             case "3":
-             //   Update update = new Update();
+                Update update = new Update();
                 break;
             case "4":
-             //   Delete delete = new Delete();
+                Delete delete = new Delete();
                 break;
             case "5":
                 System.exit(0);
