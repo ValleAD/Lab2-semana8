@@ -7,7 +7,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 public class ConexionCRUD {
-    private final String servidor = "jdbc:mysql://localhost:3306/estudiante";
+    private final String servidor = "jdbc:mysql://localhost:3306/Lab2_Semana8";
     private final String user = "root";
     private final String pass = "";
     private final String driverConector = "com.mysql.jdbc.Driver";
