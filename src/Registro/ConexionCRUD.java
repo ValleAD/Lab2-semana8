@@ -64,17 +64,17 @@ public class ConexionCRUD {
             System.out.println("HA Ocurido el siguente error " + e.getMessage());
         }
     }
-    public  void desplegarregistro(String tablaBuscar,  String camposBuscar, String condicionBuscar) throws SQLException {
+     public  void desplegarregistro(String tablaBuscar,  String camposBuscar, String condicionBuscar) throws SQLException {
         ConexionCRUD conectar =new ConexionCRUD();
        Connection cone=conectar.getConnection();
         try{
            
         Statement stmt;
         String sqlQueryStmt;
-            if(condicionBuscar .equals("")){
-                sqlQueryStmt = " SELECT " + camposBuscar + " FROM " + tablaBuscar + ";";
+            if(condicionBuscar.equals("")){
+                sqlQueryStmt = "SELECT " + camposBuscar + " FROM " + tablaBuscar + ";";
             }else{
-                sqlQueryStmt = " SELECT " + camposBuscar + " FROM " + tablaBuscar + " WHERE " + condicionBuscar;
+                sqlQueryStmt = "SELECT " + camposBuscar + " FROM " + tablaBuscar + " WHERE " + condicionBuscar;
             }
             stmt = cone.createStatement();
             stmt.executeQuery(sqlQueryStmt);  
@@ -84,12 +84,12 @@ public class ConexionCRUD {
                     int numColumnas =metaData.getColumnCount();
                     System.out.println("<< REGISTROS ALMACENADOS >>");  
                     System.out.println();
-                    for (int i = 1; numColumnas > i; i++) {
+                    for (int i = 1; i <= numColumnas; i++) {
                         System.out.printf("%-20s\t", metaData.getColumnName(i));
                     }
                     System.out.println();
                     do {
-                        for (int i = 1; numColumnas > i; i++) {
+                        for (int i = 1;i <= numColumnas; i++) {
                             System.out.printf("%-20s\t", miResultSet.getObject(i));
                         }
                          System.out.println();
@@ -105,18 +105,8 @@ public class ConexionCRUD {
                      cone.close();
             }
           } catch (SQLException e){
-              System.out.println("Ha ocurrido el Siguiente Error"+e.getMessage());
-              System.out.println("se han encontrado problemas... ");
-          }     
+              System.out.println("Ha ocurrido el Sigiente Error"+e.getMessage());
+              System.out.println("se ha encontrado problemas... ");
+          }
     }   
-
-    void desplegarRegistros(String tablaBuscar, String camposBuscar, String condicionBuscar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void actucalizarEliminarRegistro(String tabla, String camposValoresNuevos, String condicionBuscar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-} 
-
-
+}
