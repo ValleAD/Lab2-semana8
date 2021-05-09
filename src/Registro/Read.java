@@ -8,20 +8,19 @@ public class Read {
         System.out.println("<<  CONSULTA DE REGISTROS   >>");
         mostrarResultados();
     }
-    private void mostrarResultados() throws SQLException{
-        try{
-            ConexionCRUD utilerias = new ConexionCRUD();
-            String tabla = "estudiante";
-            String camposTabla = "*";
-            
-            String condicionBusqueda = "";
-            
-            utilerias.desplegarregistro(tabla, camposTabla, condicionBusqueda);
-        } catch (SQLException ex){
-            System.out.println("Ha ocurrido el siguiente error: " + ex.getMessage());
-        } finally{
-            Menu_Principal.desplegarMenu();
-        }
-        
+ private void mostrarResultados() throws SQLException {
+       try{
+           ConexionCRUD utileria= new ConexionCRUD();
+       String tabla = "estudiante";
+       String composTabla ="*";
+       String condicionBusqueda="";
+       utileria.desplegarregistro(tabla, composTabla, condicionBusqueda);
+       
+       } catch (SQLException e){
+           System.out.println("Ha ocurrido siguiente error: " +  e.getMessage());
+       
+       }finally{
+           Menu_Principal.desplegarMenu();
+       }
     }
 }
