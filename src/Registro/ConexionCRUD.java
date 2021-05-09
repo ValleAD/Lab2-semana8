@@ -109,6 +109,14 @@ public class ConexionCRUD {
               System.out.println("se han encontrado problemas... ");
           }     
     }   
+
+    void desplegarRegistros(String tablaBuscar, String camposBuscar, String condicionBuscar) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void actucalizarEliminarRegistro(String tabla, String camposValoresNuevos, String condicionBuscar) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 } 
 
 
