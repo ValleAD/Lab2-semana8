@@ -19,10 +19,10 @@ public class Delete {
         String idContactoEliminar = leer.next();
         
         //reingreso de datos para actualizar
-        String tabla = "tb_Estudiante";
+        String tabla = "estudiante";
         String campos = "*";
-        String condicion = "id_Estudiante = " + idContactoEliminar;
-        utilerias.desplegarRegistros(tabla, campos, condicion);
+        String condicion = "id_estudiante = " + idContactoEliminar;
+        utilerias.desplegarregistro(tabla, campos, condicion);
         
         System.out.println("Presionar << Y >> para confirmar: ");
         String confirmarBorrar = leer.next();
